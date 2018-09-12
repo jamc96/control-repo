@@ -17,3 +17,4 @@ forge "http://forge.puppetlabs.com"
 #  :branch => 'docs_experiment'
 
 mod 'puppetlabs-ntp', '7.2.0'
+mod 'puppetlabs-stdlib', '5.0.0'
