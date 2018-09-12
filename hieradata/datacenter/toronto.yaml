@@ -1,4 +1,4 @@
 ---
-ntp::server: 
+ntp::servers: 
   - 'torntp.sandals.com'
   - 'vanntp.sandals.com'
