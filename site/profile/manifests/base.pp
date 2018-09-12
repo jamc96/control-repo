@@ -1,4 +1,7 @@
 class profile::base {
   # modules
-  include ::ntp
+  class { '::ntp':
+    servers => ['torntp.sandals.com','vanntp.sandals.com'],
+  }
 }
+
