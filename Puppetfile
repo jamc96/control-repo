@@ -18,6 +18,3 @@ forge "http://forge.puppetlabs.com"
 
 mod 'puppetlabs-ntp', '7.2.0'
 mod 'puppetlabs-stdlib', '5.0.0'
-
-
-#test access
