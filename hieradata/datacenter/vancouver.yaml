@@ -1,2 +1,2 @@
-ntp::servers
+ntp::servers:
 -vanntp.sandals.com
