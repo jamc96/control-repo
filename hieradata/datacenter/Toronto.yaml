@@ -1,0 +1,6 @@
+---
+ntp::servers:
+  - 'torntp.sandals.com'
+  - 'vanntp.sandals.com'
+ntp::service_manage:
+  - true
