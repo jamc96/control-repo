@@ -1,3 +1,5 @@
 ---
 ntp::servers:
   - 'vanntp.sandals.com'
+# modify the file mode
+ntp::config_file_mode: '0666'
