@@ -6,4 +6,4 @@ ntp::config_file_mode: '0666'
 
 #modify the config file location
 ntp::disable_dhclient: false
-ntp::keys_controlkey: '99'
+ntp::keys_controlkey: 99
