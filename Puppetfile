@@ -19,3 +19,4 @@ forge "http://forge.puppetlabs.com"
 mod 'puppetlabs-ntp', '7.2.0'
 mod 'puppetlabs-stdlib', '5.0.0'
 mod 'simp-issue', '0.0.2'
+mod 'puppetlabs-lvm', '1.0.1'
