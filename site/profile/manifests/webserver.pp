@@ -8,9 +8,8 @@ class profile::webserver(
 ) {
   include ::base
   if $logical_volumes {
-    $lvm_list = $logical_volumes,
-  }
-  else {
+    $lvm_list = $logical_volumes
+  } else {
     if $create_web_vol{
       $webvol_hash = {
         'webvol' => { 
@@ -35,6 +34,6 @@ class profile::webserver(
   lvm::volume_group { $primary_vg:
     createonly => true,
     physical_volumes => $physical_disk,
-    }
   }
+
 }
