@@ -4,3 +4,20 @@ ntp::servers:
   - '0.centos.pool.ntp.org'
   - '1.centos.pool.ntp.org'
   - '2.centos.pool.ntp.org'
+# rsyslog parameters
+rsyslog::client::legacy_config:
+  auth_priv_rule:
+    key: "auth,authpriv.*"
+    value: "/var/log/auth.log"
+  auth_none_rule:
+    key: "*.*;auth,authpriv.none"
+    value: "/var/log/syslog"
+  syslog_all_rule:
+    key: "syslog.*"
+    value: "/var/log/rsyslog.log"
+  mail_error_rule:
+    key: "mail.err"
+    value: "/var/log/mail.err"
+  news_critical_rule:
+    key: "news.crit"
+    value: "/var/log/news/news.crit"
