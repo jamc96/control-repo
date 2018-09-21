@@ -6,7 +6,7 @@ ntp::servers:
   - '2.centos.pool.ntp.org'
 # rsyslog parameters
 rsyslog::client::legacy_config:
-  auth_user_rule:
+  message_user_rule:
     key: "auth,user.*"
     value: "/var/log/messages"
   daemon_rule:
@@ -15,9 +15,31 @@ rsyslog::client::legacy_config:
   syslog_all_rule:
     key: "syslog.*"
     value: "/var/log/syslog"
-  message_all_rule:
+  message_local_rule:
     key: "lpr,news,uucp,local0,local1,local2,local3,local4,local5,local6.*"
     value: "/var/log/messages"
   kern_all_rule:
     key: "kern.*"
     value: "/var/log/kern"
+  message_all_rule:
+    key: "*.info;mail.none;authpriv.none;cron.none"
+    value: "/var/log/messages"
+  secure_all_rule:
+    key: "authpriv.*"
+    value: "/var/log/secure"
+  mail_all_rule:
+    key: "mail.*"
+    value: "/var/log/maillog"
+  cron_all_rule:
+    key: "cron.*"
+    value: "/var/log/cron"
+  boot_all_rule:
+    key: "local7.*"
+    value: "/var/log/boot.log"
+  spooler_all_rule:
+    key: "uucp,news.crit"
+    value: "/var/log/spooler"
+  emerg_all_rule:
+    key: "*.emerg"
+    value: "*"
+
